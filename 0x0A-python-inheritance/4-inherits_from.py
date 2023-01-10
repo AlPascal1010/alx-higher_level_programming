@@ -4,7 +4,7 @@ Module for is_same_class method
 """
 
 
-def is_same_class(obj, a_class):
+def inherits_from(obj, a_class):
     """Method for comparing object classes
 
     Args:
@@ -14,9 +14,9 @@ def is_same_class(obj, a_class):
     Return:
         True if obj isinstance of a_class/ class that inherits from it.
         otherwise False
-    
+
     """
 
-    if issubclass(type(obj), a_class) or isinstance(obj, a_class):
+    if issubclass(type(obj), a_class) and type(obj) != a_class:
         return True
-    return False
+     return False
