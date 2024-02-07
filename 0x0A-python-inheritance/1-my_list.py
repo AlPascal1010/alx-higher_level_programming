@@ -1,14 +1,15 @@
-#!.usr/bin/python3
+#!/usr/bin/python3
 """
-Contains definiton for the class MyList that inherits from list.
+contains the MyList class
 """
 
 
 class MyList(list):
-    """definiton for the class MyList that inherits from list.
-    """
-    def print_sorted(sself):
-        """Prints list elements(int) in ascending order"""
+    """a subclass of list"""
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
 
-        sortedlist = sorted(self)
-        print(sortedlist)
+    def print_sorted(self):
+        """prints the sorted list"""
+        print(sorted(self))
